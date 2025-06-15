@@ -2,6 +2,14 @@ balance = 1000;
 choice = 0;
 transactions = 0
 warning = 0
+password = "1234"
+check = ""
+
+while(check != password):
+    check = input("Please enter the password to login: ")
+    if(check != password):
+        print("Wrong password please try again.")
+
 
 while choice != 4:
   # Prompt
@@ -34,7 +42,7 @@ while choice != 4:
             print("You don't have enough money to withdraw the current amount.")
             warning += 1
             if(warning > 3):
-                print("You have failed in your withdrawal too many times.")
+                print("You have failed in your withdrawal too many times. Total transactions: "  + str(transactions))
                 break
 
         else:
