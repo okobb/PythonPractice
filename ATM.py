@@ -1,5 +1,6 @@
 balance = 1000;
 choice = 0;
+transactions = 0
 
 while choice != 4:
   # Prompt
@@ -23,6 +24,8 @@ while choice != 4:
     else:
         balance  += money
         print("Money added successfully.")
+        transactions += 1
+        
   elif choice == 3:
     money = int(input("Enter the amount you want to withdraw (Must be positive): "))
     if(money) < 0:
@@ -30,7 +33,11 @@ while choice != 4:
     else:
         balance  -= money
         print("Money withdrawn successfully.")
-      
-  
+        transactions += 1
+        
+  elif choice == 4:
+    print("Program ended. Total transactions: "  + str(transactions))
+        
   else:
       print("Invalid Choice.")
+      
