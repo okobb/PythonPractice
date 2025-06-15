@@ -23,6 +23,14 @@ while choice != 4:
     else:
         balance  += money
         print("Money added successfully.")
+  elif choice == 3:
+    money = int(input("Enter the amount you want to withdraw (Must be positive): "))
+    if(money) < 0:
+        print("You have entered an invalid number.")
+    else:
+        balance  -= money
+        print("Money withdrawn successfully.")
+      
   
   else:
       print("Invalid Choice.")
